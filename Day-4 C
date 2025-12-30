@@ -1,0 +1,114 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, d, e, max, min;
+
+    // 1. Max from 2 numbers using ternary operator
+    printf("\n1) Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    max = (a > b) ? a : b;
+    printf("Max = %d\n", max);
+
+    // 2. Min from 3 numbers using nested if else
+    printf("\n2) Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    if(a < b)
+    {
+        if(a < c)
+            min = a;
+        else
+            min = c;
+    }
+    else
+    {
+        if(b < c)
+            min = b;
+        else
+            min = c;
+    }
+    printf("Min = %d\n", min);
+
+    // 3. Max from 4 numbers using nested if else
+    printf("\n3) Enter four numbers: ");
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+
+    if(a > b)
+    {
+        if(a > c)
+        {
+            if(a > d)
+                max = a;
+            else
+                max = d;
+        }
+        else
+        {
+            if(c > d)
+                max = c;
+            else
+                max = d;
+        }
+    }
+    else
+    {
+        if(b > c)
+        {
+            if(b > d)
+                max = b;
+            else
+                max = d;
+        }
+        else
+        {
+            if(c > d)
+                max = c;
+            else
+                max = d;
+        }
+    }
+    printf("Max = %d\n", max);
+
+    // 4. Min from 5 numbers using nested if else
+    printf("\n4) Enter five numbers: ");
+    scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
+
+    min = a;
+    if(b < min) min = b;
+    if(c < min) min = c;
+    if(d < min) min = d;
+    if(e < min) min = e;
+
+    printf("Min = %d\n", min);
+
+    // 5. Max from 3 numbers using ternary operator
+    printf("\n5) Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+    printf("Max = %d\n", max);
+
+    // 6. Max from 4 numbers using ternary operator
+    printf("\n6) Enter four numbers: ");
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+
+    max = (a > b) ? ((a > c) ? ((a > d) ? a : d) : ((c > d) ? c : d))
+                  : ((b > c) ? ((b > d) ? b : d) : ((c > d) ? c : d));
+
+    printf("Max = %d\n", max);
+
+    // 7. Max from 5 numbers using ternary operator
+    printf("\n7) Enter five numbers: ");
+    scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
+
+    max = (a > b) ? a : b;
+    max = (max > c) ? max : c;
+    max = (max > d) ? max : d;
+    max = (max > e) ? max : e;
+
+    printf("Max = %d\n", max);
+
+    return 0;
+}
